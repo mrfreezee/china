@@ -1,0 +1,151 @@
+.footer {
+    width: 100%;
+    background-color: rgb(219, 219, 219);
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1900px;
+    padding: 20px 50px 40px 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.footer-section1 {}
+
+.footer-section2 {}
+
+.privacy-policy {
+    text-align: start;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.privacy-policy:hover {
+    color: rgb(122, 120, 120);
+    transform: scale(105%);
+
+}
+
+.footer-menu {
+    /* max-width: 300px; */
+    /* height: 200px; */
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-menu ul {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+    display: inline-block;
+    text-align: start;
+    cursor: pointer;
+    transition: 0.2s ease;
+
+}
+
+.footer-menu li:hover {
+    color: rgb(122, 120, 120);
+    transform: scale(105%);
+}
+
+.contacts {
+    padding-right: 40px;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: start;
+}
+
+.contacts-list {}
+
+.contacts-list ul {
+    padding: 0;
+}
+
+.contacts-list li {
+    text-align: start;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+@media(max-width: 1265px) {
+    .section-title {
+        font-size: 20px;
+    }
+
+    .contacts-list li {
+        font-size: 12px;
+    }
+
+    .privacy-policy {
+        font-size: 15px;
+    }
+}
+
+@media(max-width: 990px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        grid-template-areas:
+        "section1 section2"
+        "section3 section3";
+        
+    }
+    .section1 {
+        grid-area: section1;
+    }
+    
+    .section2 {
+        grid-area: section2; 
+        display:  flex;
+        justify-content: space-around;
+    }
+    
+    .section3 {
+        grid-area: section3;
+        margin: 0 auto;
+    }
+
+}
+
+@media(max-width: 800px) {
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-section{
+        margin: 0 auto;
+        border-bottom: 2px solid rgb(180, 180, 180);
+        padding-bottom: 20px;
+    }
+    .privacy-policy{
+        text-align: center;
+    }
+    .footer-menu li{
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+    .contacts-list li{
+        font-size: 18px;
+    }
+}
